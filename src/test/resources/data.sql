@@ -1,0 +1,1 @@
+INSERT INTO dummy VALUES (1,2,null,null),(2,3,null,null),(3,4,null,null);
