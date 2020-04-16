@@ -23,7 +23,7 @@ import java.util.List;
 @Aspect
 @Component
 public class Paginator {
-    @Pointcut(value = "execution(public * *..*Mapper.selectAll(.., com.codimiracle.web.response.contract.Page)) && args(.., page)")
+    @Pointcut(value = "execution(public * *..*Mapper.*(.., com.codimiracle.web.response.contract.Page)) && args(.., page)")
     public void paginatableMethods(Page page) {}
 
     @Around(value = "paginatableMethods(page)", argNames = "proceedingJoinPoint,page")

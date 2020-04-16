@@ -33,4 +33,13 @@ class PaginatorTest {
             dummyMapper.selectAll(new Filter(), new Sorter(), new Page());
         });
     }
+
+    @Test
+    void testOtherPagination() {
+        List dummies = dummyMapper.selectSome(new Page());
+        assertDoesNotThrow(() -> {
+            PageSlice<Dummy> slice = (PageSlice<Dummy>) dummies.get(0);
+            assertNotNull(slice);
+        });
+    }
 }
