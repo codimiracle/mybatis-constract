@@ -13,7 +13,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * Service layer abstract service with Primary key type K and Entity type T
@@ -58,7 +57,7 @@ public abstract class AbstractService<K, T> implements Service<K, T> {
         try {
             T model = modelClass.newInstance();
             Field[] declaredFields = modelClass.getDeclaredFields();
-            for (Field field: declaredFields) {
+            for (Field field : declaredFields) {
                 if (field.isAnnotationPresent(Id.class)) {
                     field.setAccessible(true);
                     field.set(model, id);
@@ -123,7 +122,11 @@ public abstract class AbstractService<K, T> implements Service<K, T> {
      * @return a page slice
      */
     protected <T> PageSlice<T> extractPageSlice(List<T> list) {
-        return (PageSlice<T>) list.get(0);
+        Object first = list.get(0);
+        if (first instanceof PageSlice) {
+            return (PageSlice<T>) first;
+        }
+        throw new ServiceException("Paginator bean doesn't working, register it in ioc-container");
     }
 
     @Override
