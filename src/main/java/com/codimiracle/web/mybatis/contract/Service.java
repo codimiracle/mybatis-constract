@@ -1,7 +1,7 @@
 package com.codimiracle.web.mybatis.contract;
 
-import com.codimiracle.web.response.contract.Page;
-import com.codimiracle.web.response.contract.PageSlice;
+import com.codimiracle.web.basic.contract.Page;
+import com.codimiracle.web.basic.contract.PageSlice;
 import org.apache.ibatis.exceptions.TooManyResultsException;
 import tk.mybatis.mapper.entity.Condition;
 
@@ -23,12 +23,14 @@ public interface Service<K, T> {
 
     /**
      * save a bluk of persistent object
+     *
      * @param entities a list of persistent object
      */
     void save(List<T> entities);
 
     /**
      * delete a persistent object by id
+     *
      * @param id persistent object id
      */
     void deleteById(K id);
@@ -44,6 +46,7 @@ public interface Service<K, T> {
 
     /**
      * delete by id logically, in database, mark deleted field is true
+     *
      * @param id record id
      */
     void deleteByIdLogically(K id);
@@ -67,7 +70,7 @@ public interface Service<K, T> {
      * find with tk mybatis @Column name, in database it must be unique.
      *
      * @param fieldName @Column name
-     * @param value the value of column
+     * @param value     the value of column
      * @return a record that column match the value.
      * @throws TooManyResultsException
      */
@@ -93,6 +96,7 @@ public interface Service<K, T> {
 
     /**
      * retrieve all records
+     *
      * @return list of record type T
      */
     List<T> findAll();

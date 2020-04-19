@@ -1,9 +1,9 @@
 package com.codimiracle.web.mybatis.contract;
 
+import com.codimiracle.web.basic.contract.Page;
+import com.codimiracle.web.basic.contract.PageSlice;
 import com.codimiracle.web.mybatis.contract.annotation.LogicDelete;
 import com.codimiracle.web.mybatis.contract.annotation.LogicDeletedDate;
-import com.codimiracle.web.response.contract.Page;
-import com.codimiracle.web.response.contract.PageSlice;
 import org.apache.ibatis.exceptions.TooManyResultsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Condition;

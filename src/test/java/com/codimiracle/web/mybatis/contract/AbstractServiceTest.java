@@ -1,7 +1,7 @@
 package com.codimiracle.web.mybatis.contract;
 
-import com.codimiracle.web.response.contract.Page;
-import com.codimiracle.web.response.contract.PageSlice;
+import com.codimiracle.web.basic.contract.Page;
+import com.codimiracle.web.basic.contract.PageSlice;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

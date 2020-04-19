@@ -22,8 +22,8 @@ package com.codimiracle.web.mybatis.contract;/*
  * SOFTWARE.
  */
 
-import com.codimiracle.web.response.contract.Page;
-import com.codimiracle.web.response.contract.PageSlice;
+import com.codimiracle.web.basic.contract.Page;
+import com.codimiracle.web.basic.contract.PageSlice;
 import org.apache.ibatis.exceptions.TooManyResultsException;
 import tk.mybatis.mapper.entity.Condition;
 
@@ -33,10 +33,9 @@ import java.util.List;
  * for special service that like a persistent service.
  * all method will throw {@link UnsupportedOperationException }, will be use to separate focus-point in programing.
  *
- * @author Codimiracle
- *
  * @param <K> Primary type
  * @param <T> Entity type
+ * @author Codimiracle
  */
 public abstract class AbstractUnsupportedOperationService<K, T> implements Service<K, T> {
     @Override

@@ -1,6 +1,6 @@
 package com.codimiracle.web.mybatis.contract;
 
-import com.codimiracle.web.response.contract.Page;
+import com.codimiracle.web.basic.contract.Page;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

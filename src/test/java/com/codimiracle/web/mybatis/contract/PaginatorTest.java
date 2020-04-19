@@ -1,11 +1,10 @@
 package com.codimiracle.web.mybatis.contract;
 
-import com.codimiracle.web.response.contract.Filter;
-import com.codimiracle.web.response.contract.Page;
-import com.codimiracle.web.response.contract.PageSlice;
-import com.codimiracle.web.response.contract.Sorter;
+import com.codimiracle.web.basic.contract.Filter;
+import com.codimiracle.web.basic.contract.Page;
+import com.codimiracle.web.basic.contract.PageSlice;
+import com.codimiracle.web.basic.contract.Sorter;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;

@@ -1,7 +1,7 @@
 package com.codimiracle.web.mybatis.contract;
 
-import com.codimiracle.web.response.contract.Page;
-import com.codimiracle.web.response.contract.PageSlice;
+import com.codimiracle.web.basic.contract.Page;
+import com.codimiracle.web.basic.contract.PageSlice;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
@@ -24,7 +24,8 @@ import java.util.List;
 @Component
 public class Paginator {
     @Pointcut(value = "execution(public * *..*Mapper.*(.., com.codimiracle.web.response.contract.Page)) && args(.., page)")
-    public void paginatableMethods(Page page) {}
+    public void paginatableMethods(Page page) {
+    }
 
     @Around(value = "paginatableMethods(page)", argNames = "proceedingJoinPoint,page")
     public Object pagination(ProceedingJoinPoint proceedingJoinPoint, Page page) {
