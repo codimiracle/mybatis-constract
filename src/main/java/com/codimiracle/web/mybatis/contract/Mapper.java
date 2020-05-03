@@ -9,8 +9,11 @@ import tk.mybatis.mapper.common.special.InsertListMapper;
 import java.util.List;
 
 /**
+ * base mapper for po
  *
+ * @author Codimiracle
  */
+@org.apache.ibatis.annotations.Mapper
 public interface Mapper<T>
         extends
         BaseMapper<T>,
