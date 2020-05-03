@@ -1,13 +1,14 @@
 package com.codimiracle.web.mybatis.contract.support.vo.converter;
 
 import lombok.Data;
+import org.h2.util.ScriptReader;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-class AbstractConverterTest {
+class SimpleConverterTest {
 
     private Converter<A, B> converter;
 
@@ -20,11 +21,9 @@ class AbstractConverterTest {
         private String name;
     }
 
-    public static class ABConverter extends AbstractConverter<A, B> {}
-
     @BeforeEach
     void setUp() {
-        converter = new ABConverter();
+        converter = new SimpleConverter<>(A.class, B.class);
     }
     @AfterEach
     void tearDown() {
