@@ -12,7 +12,7 @@
 
     <groupId>com.codimiracle.web</groupId>
     <artifactId>mybatis-contract</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
 
     <properties>
         <java.version>1.8</java.version>
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>com.codimiracle.web</groupId>
             <artifactId>basic-contract</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.1</version>
         </dependency>
 
         <dependency>
