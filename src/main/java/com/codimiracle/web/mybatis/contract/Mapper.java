@@ -13,7 +13,6 @@ import java.util.List;
  *
  * @author Codimiracle
  */
-@org.apache.ibatis.annotations.Mapper
 public interface Mapper<T>
         extends
         BaseMapper<T>,
