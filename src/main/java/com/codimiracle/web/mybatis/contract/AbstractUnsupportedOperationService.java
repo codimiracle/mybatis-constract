@@ -37,7 +37,7 @@ import java.util.List;
  * @param <T> Entity type
  * @author Codimiracle
  */
-public abstract class AbstractUnsupportedOperationService<K, T> implements Service<K, T> {
+public abstract class AbstractUnsupportedOperationService<K, T> extends PageSliceExtractor implements Service<K, T> {
     @Override
     public void save(T entity) {
         throw new UnsupportedOperationException();

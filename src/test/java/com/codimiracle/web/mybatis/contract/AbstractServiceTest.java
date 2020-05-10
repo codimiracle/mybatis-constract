@@ -147,14 +147,6 @@ class AbstractServiceTest {
     }
 
     @Test
-    void extractPageSlice() {
-        PageSlice<Dummy> slice = new PageSlice<>();
-        List list = Arrays.asList(slice);
-        PageSlice<Dummy> result = dummyService.extractPageSlice((List<Dummy>) list);
-        assertEquals(slice, result);
-    }
-
-    @Test
     void testFindAll() {
         PageSlice<Dummy> all = dummyService.findAll(new Page());
         assertTrue(all.getTotal() >= 3);

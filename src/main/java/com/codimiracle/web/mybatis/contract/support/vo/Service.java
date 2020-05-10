@@ -8,5 +8,5 @@ import com.codimiracle.web.basic.contract.Sorter;
 public interface Service<K, T, V> extends com.codimiracle.web.mybatis.contract.Service<K, T> {
     PageSlice<V> findAllIntegrally(Filter filter, Sorter sorter, Page page);
 
-    V findByIdIntegrally(String contentId);
+    V findByIdIntegrally(String id);
 }

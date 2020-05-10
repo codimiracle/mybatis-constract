@@ -27,6 +27,7 @@ import com.codimiracle.web.basic.contract.Filter;
 import com.codimiracle.web.basic.contract.Page;
 import com.codimiracle.web.basic.contract.PageSlice;
 import com.codimiracle.web.basic.contract.Sorter;
+import com.codimiracle.web.mybatis.contract.PageSliceExtractor;
 import org.apache.ibatis.exceptions.TooManyResultsException;
 import tk.mybatis.mapper.entity.Condition;
 
@@ -40,7 +41,7 @@ import java.util.List;
  * @param <T> Entity type
  * @author Codimiracle
  */
-public abstract class AbstractUnsupportedOperationService<K, T, V> implements Service<K, T, V> {
+public abstract class AbstractUnsupportedOperationService<K, T, V> extends PageSliceExtractor implements Service<K, T, V> {
     @Override
     public void save(T entity) {
         throw new UnsupportedOperationException();

@@ -20,7 +20,7 @@ import java.util.List;
  *
  * @author Codimiracle
  */
-public abstract class AbstractService<K, T> implements Service<K, T> {
+public abstract class AbstractService<K, T> extends PageSliceExtractor implements Service<K, T> {
 
     @Autowired
     protected Mapper<T> mapper;
@@ -113,20 +113,6 @@ public abstract class AbstractService<K, T> implements Service<K, T> {
     @Override
     public List<T> findAll() {
         return mapper.selectAll();
-    }
-
-    /**
-     * extract {@link PageSlice} base of {@link Paginator}
-     *
-     * @param list a list of {@link Paginator} processed
-     * @return a page slice
-     */
-    protected <T> PageSlice<T> extractPageSlice(List<T> list) {
-        Object first = list.get(0);
-        if (first instanceof PageSlice) {
-            return (PageSlice<T>) first;
-        }
-        throw new ServiceException("Paginator bean doesn't working, register it in ioc-container");
     }
 
     @Override
