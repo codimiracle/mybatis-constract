@@ -1,4 +1,7 @@
 # Backend Componet - MyBatis Contract
+
+[![Build Status](https://travis-ci.org/codimiracle/mybatis-contract.svg?branch=master)](https://travis-ci.org/codimiracle/mybatis-contract)
+
 provides very useful class definitions for mybatis persistence framework.
 
 ## Features
